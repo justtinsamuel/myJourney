@@ -21,7 +21,7 @@ Study Case 1: algoritma, psuedocode, dan code untuk luas permukaan balok. (2*(p*
 Study Case 2: algoritma, psuedocode, dan code untuk massa jenis suatu benda. (m / v).
 Study Case 3: algoritma, psuedocode, dan code untuk volume tabung. (V = phi * r * r * T).
 
-Algoritma
+Algoritma & Psuedocode
 SC 1:
 LET p WITH ANY NUMBER; l WITH ANY NUMBER; t WITH ANY NUMBER;
 LET luasPermukaanBalok WITH 2 MUL (p MUl l ADD p MUL t ADD l MUL t);
@@ -39,29 +39,28 @@ LET phi WITH PI; r WITH ANY NUMBER; T WITH ANY NUMBER;
 let p = 2;
 let l = 4;
 let t = 6;
-let luasPermukaanBalok = 2 * (p * l + p * t + l * t);
+
+const luasPermukaanBalok = 2 * (p * l + p * t + l * t);
+console.log(
+    `Luas Permukaan Balok dengan p = ${p}, l = ${l}, dan t = ${t} adalah ${luasPermukaanBalok}`
+);
 
 // SC 2
-let m = 3;
-let v = 8;
-let rho = m / v;
+let m = 10;
+let v = 3;
+
+const rho = m / v;
+console.log(
+    `kemudian massa jenis benda dengan m = ${m} dan v = ${v} adalah ${rho.toFixed(2)}`
+);
 
 // SC 3
 let r = 5;
 const phi = Math.PI;
 let T = 8;
-let volumeTabung = Math.floor(phi * r ** 2 * T);
 
-console.log
-(
-`Luas Permukaan Balok dengan p = ${p}, l = ${l}, dan t = ${t} adalah ${luasPermukaanBalok},
-
-kemudian massa jenis benda dengan m = ${m} dan v = ${v} adalah ${rho.toFixed(2)},
-
-dan volume tabung dengan r = ${r}, dan T = ${T} adalah ${volumeTabung}.`
+const volumeTabung = Math.floor(phi * r ** 2 * T);
+console.log(
+    `dan volume tabung dengan r = ${r}, dan T = ${T} adalah ${volumeTabung}`
 );
-
-let x;
-y;
-console.log(y);
 
