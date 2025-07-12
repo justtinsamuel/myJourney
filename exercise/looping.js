@@ -114,19 +114,40 @@ for (let i = 0; i < 5; i++){
 
 // SC 3 = cek apakah input adalah bilangan prima (hanya punya 2 faktor);
 
-let number = 1111;
-let factor = 0;
+// let number = 1111;
+// let factor = 0;
 
-for (let i = 1; i <= number; i++) {
-  // if untuk ++ nilai factor
-  if (number % i == 0) {
-    factor++;
-  }
-}
+// for (let i = 1; i <= number; i++) {
+//   // if untuk ++ nilai factor
+//   if (number % i == 0) {
+//     factor++;
+//   }
+// }
 
-if (factor === 2) {
-  console.log(`Nilai ${number} adalah bilangan prima, karena hanya memiliki 2 faktor`);
-} else if (factor !== 2) {
-  console.log(`Nilai ${number} adalah bukan bilangan prima, karena punya ${factor} faktor`);
+// if (factor === 2) {
+//   console.log(`Nilai ${number} adalah bilangan prima, karena hanya memiliki 2 faktor`);
+// } else if (factor !== 2) {
+//   console.log(`Nilai ${number} adalah bukan bilangan prima, karena punya ${factor} faktor`);
+// }
+
+// SC 4 = Hitung hasil dari sebuah angka faktorial. Contoh 5! = 5, 4, 3, 2, 1
+// let faktorial = 5;
+// let hasil = 1;
+
+// for (let i = faktorial; i >= 1; i--) {
+//   hasil *= i;
+//   console.log(`faktorial dari !${faktorial} adalah ${hasil}`);
+// }
+
+// SC 5, buat segitiga berdasarkan jumlah angka
+let num = 5;
+let a = '';
+
+for (i = 0; i <= num; i++) {
+    for (j = 0; j <= i; j++) {
+        a += '# '
+    }
+    console.log(a);
+    a = '';
 }
 
