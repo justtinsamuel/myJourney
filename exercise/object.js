@@ -159,22 +159,49 @@
 //   }
 // }
 
-const product = {
-  id: "ELD2807",
-  name: "Koenigsegg Agera RS",
-  price: 1000000000,
-  stock: 2,
-  category: "Sport Car",
+// const product = {
+//   id: "ELD2807",
+//   name: "Koenigsegg Agera RS",
+//   price: 1000000000,
+//   stock: 2,
+//   category: "Sport Car",
 
-  discount: function () {
-    return this.price * 0.01;
-  },
-};
+//   discount: function () {
+//     return this.price * 0.01;
+//   },
+// };
 
-console.log(product.name);
-console.log(product.discount());
+// console.log(product.name);
+// console.log(product.discount());
 
-/* 
-Kesimpulan:
+// Contoh dalam OBJECT ada ARRAY, di dalamnya ARRAY ada OBJECT lagi.
 
-*/
+
+// OBJECT
+const tokoOnline = {
+    // KEY VALUE
+    namaToko : 'My Olshop',
+    product : [
+        {
+            id : "B001",
+            name : "Sport Shoes Nike",
+            price : 1000000,
+            category : {
+                main : 'sepatu',
+                sub : 'sport',
+            },
+            review : [
+                {
+                    user : 'Mas Prab',
+                    rating : 5,
+                },
+                {
+                    user : 'Mas Jok',
+                    rating : 4,
+                }
+            ]
+        },
+    ]
+}
+
+console.log(tokoOnline.product[0].review);
