@@ -97,7 +97,7 @@ class TokoBuah {
   // Delete, tapi ini hanya karena object statis saja. Overwrite aja, karena belum pakai DB gak bisa beneran Delete.
   deleteItems(id) {
     this.shelves = this.shelves.filter((shelf) => shelf.id !== id);
-  }
+  } 
 
   // Update data.
   editItem(id, name, price, stock){

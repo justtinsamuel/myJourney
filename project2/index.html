@@ -1,0 +1,56 @@
+<div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">Inventory Management</h2>
+
+  <form id="form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <input type="text" id="name" placeholder="Item Name" class="border p-2 rounded" required />
+    <input type="text" id="category" placeholder="Category" class="border p-2 rounded" required />
+    <input type="number" id="stock" placeholder="Stock" class="border p-2 rounded" required />
+    <input type="text" id="unit" placeholder="Unit (e.g. pcs, kg)" class="border p-2 rounded" required />
+    <input type="number" id="price" placeholder="Price" class="border p-2 rounded" required />
+    <button type="submit" class="col-span-1 md:col-span-2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Add Item</button>
+  </form>
+
+  <table class="mt-6 w-full border-collapse">
+    <thead>
+      <tr class="bg-gray-100">
+        <th class="text-left p-2 border">Name</th>
+        <th class="text-left p-2 border">Category</th>
+        <th class="text-left p-2 border">Stock</th>
+        <th class="text-left p-2 border">Unit</th>
+        <th class="text-left p-2 border">Price</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- JS akan render isi -->
+    </tbody>
+  </table>
+</div>
+
+<script>
+  const form = document.getElementById('form');
+  const tableBody = document.getElementById('table-body');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const category = document.getElementById('category').value;
+    const stock = document.getElementById('stock').value;
+    const unit = document.getElementById('unit').value;
+    const price = document.getElementById('price').value;
+
+    const row = `<tr>
+      <td>${name}</td>
+      <td>${category}</td>
+      <td>${stock}</td>
+      <td>${unit}</td>
+      <td>${price}</td>
+    </tr>`;
+
+    tableBody.innerHTML += row;
+
+    form.reset();
+  });
+</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
