@@ -40,3 +40,7 @@ space();
 newKitchen.sortByPrice('asc');
 space();
 newKitchen.groupByType();
+space();
+newKitchen.clearCookies();
+space();
+newKitchen.showCookie();

@@ -16,16 +16,16 @@ class Kitchen {
         : this.container[this.container.length - 1].id + 1;
 
     // Switch Case to PUSH to Container
-    switch (type) {
-      case "Chocolate":
+    switch (type.toLowerCase()) {
+      case "chocolate":
         this.container.push(
           new Chocolate(id, name, price, ingredients, isSweet)
         );
         break;
-      case "Sweet":
+      case "sweet":
         this.container.push(new Sweet(id, name, price, ingredients, isSweet));
         break;
-      case "Strawberry":
+      case "strawberry":
         this.container.push(
           new Strawberry(id, name, price, ingredients, isSweet)
         );
@@ -33,12 +33,14 @@ class Kitchen {
       default:
         console.log(`Wrong Input: ${type} is not a valid cookie type.`);
     }
+    console.log(`New ${name} available!`);
+    
   }
 
   // METHOD, untuk DELETE.
   eat(id) {
     this.container = this.container.filter(
-      (tempContainer) => tempContainer.id !== id
+      (cookie) => cookie.id !== id
     );
   }
 
@@ -50,6 +52,8 @@ class Kitchen {
       }
       return thisCookie;
     });
+    console.log(`This Cookie with id ${id} is now as sweet as you.`);
+    
   }
 
   // METHOD, untuk READ.
@@ -165,5 +169,10 @@ class Kitchen {
       });
     }
   }
+
+  clearCookies() {
+  this.container = [];
+  console.log("All cookies have been cleared.");
+}
 }
 module.exports = Kitchen;
